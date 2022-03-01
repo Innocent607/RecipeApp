@@ -6,8 +6,12 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
+@Data
+@Table(name="recipe")
 public class Recipe {
 
     @Id

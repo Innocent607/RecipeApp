@@ -7,9 +7,12 @@ package com.inno.RecipeApp.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
+
 
 /**
  * Created by jt on 6/13/17.
@@ -17,6 +20,7 @@ import java.util.Set;
 @Data
 @EqualsAndHashCode(exclude = {"recipes"})
 @Entity
+@Table(name="category")
 public class Category {
 
     @Id

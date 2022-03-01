@@ -2,6 +2,8 @@ package com.inno.RecipeApp.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -11,9 +13,11 @@ import java.math.BigDecimal;
  * AKA Inno607
  */
 
-@Data
+@Setter
+@Getter
 @EqualsAndHashCode(exclude = {"recipe"})
 @Entity
+@Table(name="ingredients")
 public class Ingredient {
 
     @Id
@@ -43,5 +47,4 @@ public class Ingredient {
         this.uom = uom;
         this.recipe = recipe;
     }
-
 }
